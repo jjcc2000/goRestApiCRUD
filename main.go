@@ -76,6 +76,7 @@ func deleteTask(w http.ResponseWriter, r *http.Request) {
 		if taskId == val.ID {
 			w.Header().Set("Content-type", "applicatio/json")
 			json.NewEncoder(w).Encode("We found your task")
+			//You cut the slice and then add it back to the Original 
 			Task = append(Task[:i], Task[i+1:]...)
 		}
 	}
