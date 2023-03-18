@@ -106,7 +106,6 @@ func updateTask(w http.ResponseWriter, r *http.Request) {
 			Task = append(Task, updatedTask)
 
 			fmt.Fprint(w, "The task with the id %v has been updated succesfully.", taskId)
-			fmt.Fprint(w, "The task is not been really Filter")
 		}
 	}
 
